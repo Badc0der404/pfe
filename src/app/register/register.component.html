@@ -1,0 +1,57 @@
+<br>
+<button type="button" class="btn btn-primary ml-2 fancy-button" routerLink="/home">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+<path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"></path>
+</svg>
+    Home
+  </button>
+<section class="container">
+    <div class="p-5 bg-image" style="
+          background-color: #007bff;
+          height: 300px;
+          "></div>
+    <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+          margin-top: -100px;
+          background: hsla(0, 0%, 100%, 0.8);
+          backdrop-filter: blur(30px);
+          ">
+      <div class="container py-5 px-md-5">
+  
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="fw-bold mb-5">Sign up now</h2>
+            <form (ngSubmit)="onSubmit()">
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div data-mdb-input-init class="form-outline">
+                    <input type="text" id="form3Example1" class="form-control" [(ngModel)]="model.firstname" name="firstname" required />
+                    <label class="form-label" for="form3Example1" >First name</label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div data-mdb-input-init class="form-outline">
+                    <input type="text" id="form3Example2" class="form-control" [(ngModel)]="model.lastname" name="lastname" required/>
+                    <label class="form-label" for="form3Example2">Last name</label>
+                  </div>
+                </div>
+              </div>
+              <div data-mdb-input-init class="form-outline mb-4">
+                <input type="email" id="form3Example3" class="form-control" [(ngModel)]="model.email" name="email" required />
+                <label class="form-label" for="form3Example3">Email address</label>
+              </div>
+              <div data-mdb-input-init class="form-outline mb-4">
+                <input type="password" id="form3Example4" class="form-control" />
+                <label class="form-label" for="form3Example4">Password</label>
+              </div>  
+              <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">
+                Sign up
+              </button>
+              <br>
+              <p class="small fw-bold mt-2 pt-1 mb-0">Already have an account? <a routerLink="/login"
+                class="link-danger">Login</a></p>                 
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

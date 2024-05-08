@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand mb-0 h1" href="#">CV Analyzer Pro</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#overview">Overview</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/add-offer'">Job Postings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/user-manag'">Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/interviews'">Interviews</a>
+        </li>
+      </ul>
+      <div class="navbar-text">
+        <button class="btn btn-outline-light ml-3" type="button">Logout</button>
+      </div>
+    </div>
+</nav>
+<!-- interview.component.html -->
+<div class="container mt-4">
+    <h2>Interview Management</h2>
+    <hr>
+  
+    <!-- Schedule New Interview Form -->
+    <div class="card mb-4">
+      <div class="card-header">
+        Schedule New Interview
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="scheduleInterview(form)">
+          <div class="form-group">
+            <label for="candidateName">Candidate Name</label>
+            <input type="text" class="form-control" id="candidateName" name="candidateName" required>
+          </div>
+          <div class="form-group">
+            <label for="interviewDate">Interview Date</label>
+            <input type="date" class="form-control" id="interviewDate" name="interviewDate" required>
+          </div>
+          <div class="form-group">
+            <label for="interviewTime">Interview Time</label>
+            <input type="time" class="form-control" id="interviewTime" name="interviewTime" required>
+          </div>
+          <div class="form-group">
+            <label for="meetingLink">Meeting Link</label>
+            <input type="url" class="form-control" id="meetingLink" name="meetingLink" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Schedule Interview</button>
+        </form>
+      </div>
+    </div>
+  
+    <!-- Upcoming Interviews List -->
+    <div class="card">
+      <div class="card-header">
+        Upcoming Interviews
+      </div>
+      <div class="card-body">
+        <ul class="list-group">
+          <li class="list-group-item">Interview with John Doe - 2024-05-01 - 10:00 AM - <a href="meetingLink">Meeting Link</a></li>
+          <li class="list-group-item">Interview with Jane Smith - 2024-05-05 - 11:00 AM - <a href="meetingLink">Meeting Link</a></li>
+          <!-- Upcoming interviews will be populated dynamically -->
+        </ul>
+      </div>
+    </div>
+  </div>
+  

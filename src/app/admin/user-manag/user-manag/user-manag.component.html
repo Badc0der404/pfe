@@ -1,0 +1,92 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand mb-0 h1" href="#">CV Analyzer Pro</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#overview">Overview</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/add-offer'">Job Postings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/user-manag'">Users</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/interviews'">Interviews</a>
+      </li>
+    </ul>
+    <div class="navbar-text">
+      <button class="btn btn-outline-light ml-3" type="button">Logout</button>
+    </div>
+  </div>
+</nav>
+<div class="container mt-4">
+  <h2>User Management Dashboard</h2>
+  <hr>
+  <!-- Add New User Form -->
+  <div class="card mb-4">
+    <div class="card-header">
+      Add New User
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="addUser()">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="firstname">First name</label>
+            <input type="text" class="form-control" id="firstname" name="firstname" [(ngModel)]="firstname"required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="lastname">Last name</label>
+            <input type="text" class="form-control" id="lastname" name="lastname" [(ngModel)]="lastname" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password" required>
+        </div>
+      
+        <button type="submit" class="btn btn-primary">Add User</button>
+   
+      </form>
+    </div>
+  </div>
+  <!-- User List -->
+  <div class="card">
+    <div class="card-header">
+      User List
+    </div>
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Email</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- User rows will be populated dynamically -->
+          <tr *ngFor="let user of users">
+            <td>{{ user.id }}</td>
+            <td>{{ user.firstname }}</td>
+            <td>{{ user.lastname }}</td>
+            <td>{{ user.email }}</td>
+            <td>
+              <button class="btn btn-danger btn-sm" (click)="deleteUser(user.id)">Delete</button>
+              <button class="btn btn-primary btn-sm" (click)="updateUser(user)">Update</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

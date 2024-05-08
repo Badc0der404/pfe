@@ -1,0 +1,48 @@
+/* Custom CSS for User Management Form */
+
+/* Form container */
+.container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  /* Card styling */
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Card header */
+  .card-header {
+    background-color: #007bff; /* Primary color */
+    color: #fff; /* White text */
+    border-radius: 10px 10px 0 0; /* Rounded corners for top */
+  }
+  
+  /* Card body */
+  .card-body {
+    padding: 20px;
+  }
+  
+  /* Form labels */
+  label {
+    font-weight: bold;
+  }
+  
+  /* Form inputs */
+  .form-control {
+    border-radius: 5px;
+  }
+  
+  /* Submit button */
+  .btn-primary {
+    background-color: #007bff; /* Primary color */
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Darker shade of primary color */
+  }
+  

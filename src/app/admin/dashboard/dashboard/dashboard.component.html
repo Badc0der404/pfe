@@ -1,0 +1,70 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand mb-0 h1" routerLink="'/dashboard'">CV Analyzer Pro</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#overview">Overview</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/add-offer'">Job Postings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/user-manag'">Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'/interviews'">Interviews</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#analytics">Analytics</a>
+        </li>
+      </ul>
+      <div class="navbar-text">
+        <button class="btn btn-outline-light ml-3" type="button">Logout</button>
+      </div>
+    </div>
+</nav>
+  
+<div class="container mt-4">
+  <h2>Application Overview</h2>
+  <hr>
+
+  <!-- Application Statistics -->
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <i class="bi bi-people-fill"></i> Users
+        </div>
+        <div class="card-body">
+          Total Users: {{ totalUsers }}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <i class="bi bi-calendar-event-fill"></i> Interviews
+        </div>
+        <div class="card-body">
+          Total Interviews Scheduled: {{ totalInterviews }}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <i class="bi bi-briefcase-fill"></i> Jobs
+        </div>
+        <div class="card-body">
+          Total Jobs Posted: {{ totalJobs }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  

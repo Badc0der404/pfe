@@ -1,0 +1,83 @@
+body {
+    margin-top: 20px;
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    font-family: 'Poppins', sans-serif;
+    display: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.container {
+    transition: all 0.5s ease-in-out;
+    
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+.fancy-button {
+    transition: all 0.5s ease-in-out;
+}
+
+.fancy-button:hover {
+    transform: scale(1.1);
+}
+
+.card {
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.input-group-text {
+    transition: all 0.5s ease-in-out;
+}
+
+.input-group-text:hover {
+    background-color: #077bff;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #077bff;
+    border-color: #077bff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-link {
+    color: #077bff;
+}
+
+.btn-link:hover, .btn-link:focus, .btn-link:active {
+    color: #0056b3;
+}
+
+.card.text-white.bg-primary.py-5.d-md-down-none {
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card.text-white.bg-primary.py-5.d-md-down-none:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.btn.btn-primary.active.mt-3 {
+    background-color: #077bff;
+    border-color: #077bff;
+}
+
+.btn.btn-primary.active.mt-3:hover, .btn.btn-primary.active.mt-3:focus, .btn.btn-primary.active.mt-3:active {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
